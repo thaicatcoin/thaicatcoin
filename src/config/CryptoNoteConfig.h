@@ -28,7 +28,7 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_MAX_TX_SIZE = 1000000000;
 
-        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x4c9c;
+        const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xc8c1c;
 
         const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW = 20;
 
@@ -62,7 +62,7 @@ namespace CryptoNote
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
         const char GENESIS_COINBASE_TX_HEX[] =
-            "011401ff0001bbbad6adf00d029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071840101f17f6973353e5e57469119340803db8a589ebdd27e8cc2049ab8b4b1a13e7edd0400000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000000640db8e28707d6abf8c23c21dfbe6fe89e161e09b6da9fe48693f8a6eb4007706";
+            "010";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
@@ -257,12 +257,11 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-            1000, // 0
-            3000, // 1
+
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
-        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 1;
+        const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 0;
 
         const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
@@ -381,7 +380,7 @@ namespace CryptoNote
         {0xa0, 0xb1, 0xc2, 0xd3, 0xa0, 0xb1, 0xc2, 0xd3, 0xa0, 0xb1, 0xc2, 0xd3, 0xa0, 0xb1, 0xc2, 0xd3}};
 
     const char *const SEED_NODES[] = {
-        "45.138.50.145:21321", // cision
-        "45.138.50.146:21321" // CuveeCZ
+        "45.138.50.145:21321", // node1
+        "45.138.50.146:21321" // node2
     };
 } // namespace CryptoNote
