@@ -1,12 +1,12 @@
-// Copyright (c) 2018, The TurtleCoin Developers
+// Copyright (c) 2021, The ThaiCatCoin DevOps
 //
 // Please see the included LICENSE file for more information.
 
 #include <string>
 
-constexpr std::string_view canary = "TurtleCoin";
+constexpr std::string_view canary = "ThaiCatCoin";
 
-constexpr std::string_view canaryObfusticated = "\u0054\u0075\u0072\u0074\u006c\u0065\u0043\u006f\u0069\u006e";
+constexpr std::string_view canaryObfusticated = "\u0054\u0068\u0061\u0069\u0043\u0061\u0074\u0043\u006f\u0069\u006e";
 
 /* Compare the canary with T u r t l e C o i n. Done as unicode to not be caught
    by find and replace. If find and replace occured, the canary will no longer

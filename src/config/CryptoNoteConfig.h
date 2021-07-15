@@ -43,9 +43,9 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(1000000000000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(10000000000000000);
 
-        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 0;
+        const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 200000;
 
         const size_t ZAWY_DIFFICULTY_V2 = 0;
 
@@ -85,10 +85,10 @@ namespace CryptoNote
 
         const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600;
 
-        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 6;
+        const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 4;
 
         /* TODO: Remove? */
-        const uint64_t MINIMUM_FEE = UINT64_C(15000);
+        const uint64_t MINIMUM_FEE = UINT64_C(1500);
 
         /* Fee per byte is rounded up in chunks. This helps makes estimates
          * more accurate. It's suggested to make this a power of two, to relate
@@ -100,7 +100,7 @@ namespace CryptoNote
          * something like 2 because it makes for pretty resulting fees
          * - 5 TRTL vs 5.12 TRTL. You can read this as.. the fee per chunk
          * is 500 atomic units. The fee per byte is 500 / chunk size. */
-        const double MINIMUM_FEE_PER_BYTE_V1 = 500.00 / FEE_PER_BYTE_CHUNK_SIZE;
+        const double MINIMUM_FEE_PER_BYTE_V1 = 500.0000 / FEE_PER_BYTE_CHUNK_SIZE;
 
         /* Height for our first fee to byte change to take effect. */
         const uint64_t MINIMUM_FEE_PER_BYTE_V1_HEIGHT = 2200000;
@@ -119,15 +119,15 @@ namespace CryptoNote
         const uint64_t MAXIMUM_MIXIN_V3 = 3;
 
         /* The heights to activate the mixin limits at */
-        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 5;
+        const uint32_t MIXIN_LIMITS_V1_HEIGHT = 250000;
 
-        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 10;
+        const uint32_t MIXIN_LIMITS_V2_HEIGHT = 500000;
 
-        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 15;
+        const uint32_t MIXIN_LIMITS_V3_HEIGHT = 750000;
 
         /* The mixin to use by default with wallet software */
         /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
-        const uint64_t DEFAULT_MIXIN_V0 = 3;
+        const uint64_t DEFAULT_MIXIN_V0 = 0;
 
         const uint64_t DEFAULT_MIXIN_V1 = MAXIMUM_MIXIN_V1;
 
@@ -182,12 +182,12 @@ namespace CryptoNote
         /* 25 trillion atomic, or 250 billion TRTL -> Max supply / mixin+1 outputs */
         /* This is enforced on the daemon side. An output > 250 billion causes
          * an invalid block. */
-        const uint64_t MAX_OUTPUT_SIZE_NODE = 250'000'000'000'00;
+        const uint64_t MAX_OUTPUT_SIZE_NODE = 250'000'000'000'0000;
 
         /* 100 billion atomic, or 1 billion TRTL */
         /* This is enforced on the client side. An output > 1 billion will not
          * be created in a transaction */
-        const uint64_t MAX_OUTPUT_SIZE_CLIENT = 1'000'000'000'00;
+        const uint64_t MAX_OUTPUT_SIZE_CLIENT = 1'000'000'000'0000;
 
         const uint64_t MAX_OUTPUT_SIZE_HEIGHT = 2000000;
 
@@ -241,11 +241,11 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V5 = 1200000; // Upgrade height for CN-Turtle Variant 2 switch.
+        const uint32_t UPGRADE_HEIGHT_V5 = 20000000; // Upgrade height for CN-Turtle Variant 2 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V6 = 1800000; // Upgrade height for Chukwa v1 switch.
+        const uint32_t UPGRADE_HEIGHT_V6 = 30000000; // Upgrade height for Chukwa v1 switch.
 
-        const uint32_t UPGRADE_HEIGHT_V7 = 3000000; // Upgrade height for Chukwa v2 switch
+        const uint32_t UPGRADE_HEIGHT_V7 = 40000000; // Upgrade height for Chukwa v2 switch
 
         const uint32_t UPGRADE_HEIGHT_CURRENT = UPGRADE_HEIGHT_V7;
 
@@ -257,7 +257,13 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-
+            50000, // 0
+            100000, // 1
+            500000, // 2
+            600000, // 3
+            700000, // 4
+            800000, // 5
+            900000, // 6
         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
