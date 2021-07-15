@@ -43,7 +43,7 @@ namespace CryptoNote
         const size_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V3 = 11;
 
         // MONEY_SUPPLY - total number coins to be generated
-        const uint64_t MONEY_SUPPLY = UINT64_C(10000000000000000);
+        const uint64_t MONEY_SUPPLY = UINT64_C(1000000000000);
 
         const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX = 200000;
 
@@ -88,7 +88,7 @@ namespace CryptoNote
         const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT = 4;
 
         /* TODO: Remove? */
-        const uint64_t MINIMUM_FEE = UINT64_C(1500);
+        const uint64_t MINIMUM_FEE = UINT64_C(1000);
 
         /* Fee per byte is rounded up in chunks. This helps makes estimates
          * more accurate. It's suggested to make this a power of two, to relate
@@ -100,7 +100,7 @@ namespace CryptoNote
          * something like 2 because it makes for pretty resulting fees
          * - 5 TRTL vs 5.12 TRTL. You can read this as.. the fee per chunk
          * is 500 atomic units. The fee per byte is 500 / chunk size. */
-        const double MINIMUM_FEE_PER_BYTE_V1 = 500.0000 / FEE_PER_BYTE_CHUNK_SIZE;
+        const double MINIMUM_FEE_PER_BYTE_V1 = 500.00 / FEE_PER_BYTE_CHUNK_SIZE;
 
         /* Height for our first fee to byte change to take effect. */
         const uint64_t MINIMUM_FEE_PER_BYTE_V1_HEIGHT = 2200000;
@@ -182,12 +182,12 @@ namespace CryptoNote
         /* 25 trillion atomic, or 250 billion TRTL -> Max supply / mixin+1 outputs */
         /* This is enforced on the daemon side. An output > 250 billion causes
          * an invalid block. */
-        const uint64_t MAX_OUTPUT_SIZE_NODE = 250'000'000'000'0000;
+        const uint64_t MAX_OUTPUT_SIZE_NODE = 25'000'000'0000;
 
         /* 100 billion atomic, or 1 billion TRTL */
         /* This is enforced on the client side. An output > 1 billion will not
          * be created in a transaction */
-        const uint64_t MAX_OUTPUT_SIZE_CLIENT = 1'000'000'000'0000;
+        const uint64_t MAX_OUTPUT_SIZE_CLIENT = 20'000'000'0000;
 
         const uint64_t MAX_OUTPUT_SIZE_HEIGHT = 2000000;
 
@@ -203,7 +203,7 @@ namespace CryptoNote
         /* Coinbase transactions must include the recipient address + tx priv
          * key in tx_extra to verify the outputs go to that address after this
          * height. */
-        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 2'800'000;
+        const uint64_t COINBASE_TRANSACTION_OUTPUT_CLAIMING_HEIGHT = 1'000'0000;
 
         /* This describes how many blocks of "wiggle" room transactions have regarding
            when the outputs can be spent based on a reasonable belief that the outputs
@@ -239,7 +239,7 @@ namespace CryptoNote
 
         const uint32_t UPGRADE_HEIGHT_V3 = 2;
 
-        const uint32_t UPGRADE_HEIGHT_V4 = 3; // Upgrade height for CN-Lite Variant 1 switch.
+        const uint32_t UPGRADE_HEIGHT_V4 = 5000; // Upgrade height for CN-Lite Variant 1 switch.
 
         const uint32_t UPGRADE_HEIGHT_V5 = 20000000; // Upgrade height for CN-Turtle Variant 2 switch.
 
